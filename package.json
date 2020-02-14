@@ -1,16 +1,16 @@
 {
-  "name": "Template",
+  "name": "Portfolio Jason Miller",
   "version": "1.0.0",
-  "description": "Template combining sequelizer and handlebars",
+  "description": "Portfolio for Jason Miller",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jem3523/homework_week13.git"
+    "url": "git+https://github.com/jem3523/portfolio_JasonMiller"
   },
-  "author": "",
+  "author": "Jason Miller",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jem3523/"
