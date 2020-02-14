@@ -1,27 +1,27 @@
 {
-  "name": "Portfolio Jason Miller",
+  "name": "portfolio_jasonmiller",
   "version": "1.0.0",
-  "description": "Portfolio for Jason Miller",
+  "description": "",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jem3523/portfolio_JasonMiller"
+    "url": "git+https://github.com/jem3523/portfolio_JasonMiller.git"
   },
   "author": "Jason Miller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jem3523/"
+    "url": "https://github.com/jem3523/portfolio_JasonMiller/issues"
   },
-  "homepage": "https://github.com/jem3523/",
+  "homepage": "https://github.com/jem3523/portfolio_JasonMiller#readme",
   "dependencies": {
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "path": "^0.12.7",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.4"
   }
 }
