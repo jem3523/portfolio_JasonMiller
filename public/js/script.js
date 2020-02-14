@@ -1,7 +1,7 @@
 $(document).ready(function() 
 {
     $(".eleClick").on("click", seeLinks);
-    $(document).ready(runToolTip);
+    //$(document).ready(runToolTip);
 
     function runToolTip()
     {
@@ -17,8 +17,8 @@ $(document).ready(function()
         var appLink = $(this).attr("data-app");
         var gitLink = $(this).attr("data-git");
 
-        var appInsert = "<div class = 'moreInfoDetail'><a class = 'font-green' href ='" + appLink + "'>Live Application</a></div>"
-        var gitInsert = "<div class = 'moreInfoDetail'><a class = 'font-green' href ='" + gitLink + "'>GitHub Source</a></div>"
+        var appInsert = "<div class = 'moreInfoDetail'><a class = 'font-green' href ='" + appLink + "' target='_blank'>Live Application</a></div>"
+        var gitInsert = "<div class = 'moreInfoDetail'><a class = 'font-green' href ='" + gitLink + "' target='_blank'>GitHub Source</a></div>"
 
         $(this).append(appInsert);
         $(this).append(gitInsert);
