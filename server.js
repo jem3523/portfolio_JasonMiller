@@ -7,8 +7,6 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
-
 //UPDATE THE ROUTE LIST!
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);

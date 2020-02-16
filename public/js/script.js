@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() 
 {
     $(".eleClick").on("click", seeLinks);
@@ -26,10 +28,9 @@ $(document).ready(function()
 
 
     $("#submitButton").on("click", formSubmit);
- 
+    
     function formSubmit(event) 
     {
-        console.log("hello")
         event.preventDefault();
 
         //collect the values from input
@@ -38,9 +39,9 @@ $(document).ready(function()
         var enteredMessage =  $("#enteredMessage").val();
 
         //make sure name and email are not empty
-        if (!enteredName || !enteredEmail) 
+        if (!enteredName || !enteredEmail || !enteredMessage) 
         {
-            console.log("Either name or email is missing for input.");
+            console.log("Name, email, and message are all required.");
             return
         };
 
@@ -49,10 +50,11 @@ $(document).ready(function()
         
         console.log (newMessage);
 
+        
         $.post("/contact", newMessage, function() 
         {
             console.log("New message saved.")
-            window.location.href = "/";
-      });
+            location.reload();
+        });
     };
 });

@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Milroat@1",
+    "password": "doAnIndexFileUpdateToLocalSequelize",
     "database": "portfolio_db",
     "host": "localhost",
     "dialect": "mysql",

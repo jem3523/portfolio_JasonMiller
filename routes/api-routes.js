@@ -1,4 +1,5 @@
 var db = require("../models");
+var nodemailer = require('nodemailer');
 
 module.exports = function(app) 
 {
@@ -9,6 +10,43 @@ module.exports = function(app)
     .then(function(result) 
     {
       res.json(result);
+
+      //Yahoo password must be generated with Yahoo account
+      let transporter = nodemailer.createTransport(
+      {
+          service:"yahoo",
+          auth: 
+          {
+              user: "jaericm@yahoo.com",
+              pass: process.env.yahooPW
+          },
+          debug: true,
+          logger: true
+
+          //host: "smtp.mail.yahoo.com",
+          //port: 465,
+          //secure: true, // true for 465, false for other ports
+      });
+        
+      var mailOptions = 
+      {
+          from: 'jaericm@yahoo.com',
+          to: 'jaericm@yahoo.com',
+          subject: "Website Contact Message from " + result.myName,
+          text: result.myName + " (" + result.myEmail + "): ",
+          html: "<p>" + result.myMessage + "</p>"
+      };
+              
+      console.log (mailOptions);
+
+      transporter.sendMail(mailOptions, function(error, info)
+      {
+          if (error) 
+          {console.log(error)} 
+          else 
+          {console.log('Email sent: ' + info.response)}
+      });
+
     });
   });
 
