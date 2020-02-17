@@ -8,11 +8,11 @@ This site contains biographical and contact information for Jason Miller, as wel
 ---- 
 
 ## Technologies Used
-Server: Node and Express
-Backed by a MySQL database and Sequelize ORM
-Deployed with Heroku
-CSS Styling: Bootstrap
-Followed an MVC paradigm
+1. Server: Node and Express
+2. Backed by a MySQL database and Sequelize ORM
+3. Deployed with Heroku
+4. CSS Styling: Bootstrap
+5. Followed an MVC paradigm
 
 ----
 
