@@ -1,16 +1,9 @@
-
-
 $(document).ready(function() 
 {
+    //listener for tooltip rollover
     $(".eleClick").on("click", seeLinks);
-    //$(document).ready(runToolTip);
 
-    function runToolTip()
-    {
-        $('[data-toggle="tooltip"]').tooltip();   
-    };
-
-
+    //once clicked, this function collects the link data embedded in <a> and renders them on the page
     function seeLinks ()
     {
         $(".moreInfoDetail").remove();
@@ -27,6 +20,7 @@ $(document).ready(function()
     }
 
 
+    //this function posts new contact form data into the DB
     $("#submitButton").on("click", formSubmit);
     
     function formSubmit(event) 

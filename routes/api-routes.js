@@ -11,7 +11,7 @@ module.exports = function(app)
     {
       res.json(result);
 
-      //Yahoo password must be generated with Yahoo account
+      //NOTE! Yahoo password must be generated within personal Yahoo account
       let transporter = nodemailer.createTransport(
       {
           service:"yahoo",
@@ -23,6 +23,7 @@ module.exports = function(app)
           debug: true,
           logger: true
 
+          //NOTE: yahoo is one of the listed providers for this npm, so the following three attributes are already baked in
           //host: "smtp.mail.yahoo.com",
           //port: 465,
           //secure: true, // true for 465, false for other ports
