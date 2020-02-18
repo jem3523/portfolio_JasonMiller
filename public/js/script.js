@@ -48,7 +48,7 @@ $(document).ready(function()
         $.post("/contact", newMessage, function() 
         {
             console.log("New message saved.")
-            location.reload();
+            //location.reload();    replaced with modal message (which now triggers it)
         });
     };
 });
